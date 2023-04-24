@@ -25,7 +25,7 @@ import org.pac4j.jax.rs.pac4j.JaxRsUrlResolver;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.NotNull;
 
 /**
  * Dropwizard configuration factory to configure pac4j's {@link Config},

@@ -30,7 +30,6 @@ public class AbstractApplicationTest {
             String configPath, ConfigOverride... configOverrides) throws Exception{
         dropwizardTestSupport = new DropwizardTestSupport<>(applicationClass,
                 ResourceHelpers.resourceFilePath(configPath), configOverrides);
-        var test = dropwizardTestSupport.getConfiguration();
         dropwizardTestSupport.before();
     }
 

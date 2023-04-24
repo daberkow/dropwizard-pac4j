@@ -9,7 +9,7 @@ import org.pac4j.dropwizard.Pac4jFactory.JaxRsSecurityFilterConfiguration;
 import org.pac4j.dropwizard.Pac4jFactory.ServletCallbackFilterConfiguration;
 import org.pac4j.dropwizard.Pac4jFactory.ServletLogoutFilterConfiguration;
 import org.pac4j.dropwizard.Pac4jFactory.ServletSecurityFilterConfiguration;
-import org.pac4j.jax.rs.features.JaxRsConfigProvider;
+//import org.pac4j.jax.rs.features.JaxRsConfigProvider;
 import org.pac4j.jax.rs.features.Pac4JSecurityFeature;
 import org.pac4j.jax.rs.features.Pac4JSecurityFilterFeature;
 import org.pac4j.jax.rs.filters.SecurityFilter;
