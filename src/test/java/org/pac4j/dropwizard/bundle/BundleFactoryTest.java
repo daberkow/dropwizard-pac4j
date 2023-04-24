@@ -13,7 +13,7 @@ import org.pac4j.jax.rs.servlet.features.ServletJaxRsContextFactoryProvider;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import io.dropwizard.setup.Environment;
+import io.dropwizard.core.setup.Environment;
 import io.dropwizard.testing.ConfigOverride;
 
 public class BundleFactoryTest extends AbstractApplicationTest {
@@ -30,7 +30,7 @@ public class BundleFactoryTest extends AbstractApplicationTest {
     public void noPac4jInConfig() throws Exception{
         setup(App.class, "no-pac4j.yaml");
 
-        App app = dropwizardTestSupport.getApplication();
+        App app = (App) dropwizardTestSupport.getApplication();
         ObjectMapper om = dropwizardTestSupport.getObjectMapper();
         Environment env = dropwizardTestSupport.getEnvironment();
 
@@ -46,7 +46,7 @@ public class BundleFactoryTest extends AbstractApplicationTest {
     public void emptyPac4jInConfig() throws Exception{
         setup(App.class, "empty-pac4j.yaml");
 
-        App app = dropwizardTestSupport.getApplication();
+        App app = (App) dropwizardTestSupport.getApplication();
         ObjectMapper om = dropwizardTestSupport.getObjectMapper();
         Environment env = dropwizardTestSupport.getEnvironment();
 
@@ -68,7 +68,7 @@ public class BundleFactoryTest extends AbstractApplicationTest {
         setup(App.class, "empty-pac4j.yaml",
                 ConfigOverride.config("pac4j.sessionEnabled", "true"));
 
-        App app = dropwizardTestSupport.getApplication();
+        App app = (App) dropwizardTestSupport.getApplication();
         Environment env = dropwizardTestSupport.getEnvironment();
 
         Config config = app.bundle.getConfig();
@@ -83,7 +83,7 @@ public class BundleFactoryTest extends AbstractApplicationTest {
         setup(App.class, "empty-pac4j.yaml",
                 ConfigOverride.config("pac4j.sessionEnabled", "false"));
 
-        App app = dropwizardTestSupport.getApplication();
+        App app = (App) dropwizardTestSupport.getApplication();
         Environment env = dropwizardTestSupport.getEnvironment();
 
         Config config = app.bundle.getConfig();

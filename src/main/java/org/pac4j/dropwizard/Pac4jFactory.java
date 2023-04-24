@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.validation.constraints.NotNull;
-
 import org.pac4j.config.client.PropertiesConfigFactory;
 import org.pac4j.core.authorization.authorizer.Authorizer;
 import org.pac4j.core.authorization.generator.AuthorizationGenerator;
@@ -26,6 +24,8 @@ import org.pac4j.jax.rs.pac4j.JaxRsAjaxRequestResolver;
 import org.pac4j.jax.rs.pac4j.JaxRsUrlResolver;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.validation.constraints.NotNull;
 
 /**
  * Dropwizard configuration factory to configure pac4j's {@link Config},
